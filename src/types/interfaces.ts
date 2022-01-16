@@ -4,6 +4,8 @@ export interface Environment {
     NODE_ENV: string;
     SERVER_HOST: string;
     SERVER_PORT: string;
+    BITFINEX_API: string;
+    VALID_PAIRS: string;
 }
 
 export interface AddRouteProps {

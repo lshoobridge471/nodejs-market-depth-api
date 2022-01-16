@@ -3,7 +3,9 @@ import { Environment } from '../types/interfaces';
 const testConfig: Environment = {
     NODE_ENV: 'development_test',
     SERVER_HOST: 'localhost_test',
-    SERVER_PORT: '8081'
+    SERVER_PORT: '8081',
+    BITFINEX_API: 'api.test.wstest',
+    VALID_PAIRS: 'validpairs_test',
 };
 
 process.env = {

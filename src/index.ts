@@ -1,7 +1,7 @@
 import express, { json } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import router from './router'
+import router from './router';
 import CONFIG from './config/config';
 import { toInteger } from './utils/utils';
 
