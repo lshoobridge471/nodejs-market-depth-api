@@ -1,8 +1,9 @@
 
 import CONFIG from '../config/config';
 import CONSTANTS from '../utils/constants';
+import { Tip } from '../types/interfaces';
 const { VALID_PAIRS } = CONFIG;
-const { PRECISION_TYPES, LEN_VALUES } = CONSTANTS;
+const { PRECISION_TYPES, LEN_VALUES, OPERATION_TYPES } = CONSTANTS;
 
 // Function that convert string into a number.
 export const toInteger = (value: string): number => parseInt(value, 0);
@@ -35,14 +36,22 @@ export const parseBookData = ( data: number[][] ) => {
             [ 43349, 3, -0.12125684 ],
         ]
     */
-    const mapped = data.map(item => {
+    const mapped: Tip[] = data.map(item => {
         const type = (item[2] > 0) ? 'bid' : 'ask';
         return {
             price: item[0],
-            count: item[1],
             amount: Math.abs(item[2]),
             type
         };
     });
     return mapped;
 };
+
+// Validate Operation Type
+export const validateOperationType = (type: string) => OPERATION_TYPES.indexOf(type) !== -1;
+
+// Validate Order Size
+export const validateOrderSize = (size: number) => size > 0;
+
+// Average function
+export const average = (arr: number[]) => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;

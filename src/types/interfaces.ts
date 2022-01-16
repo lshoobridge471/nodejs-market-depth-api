@@ -13,3 +13,9 @@ export interface AddRouteProps {
     path: string | string[];
     handler: Handler;
 }
+
+export interface Tip {
+    price: number;
+    amount: number;
+    type: string;
+}
