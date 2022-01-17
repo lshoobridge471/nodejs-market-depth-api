@@ -94,13 +94,13 @@ node build/index.js
 ## Endpoints
 #### /tips
 
-The endpoint call definition is:
+Endpoint definition example (js):
 
 ```javascript
 const pair = 'ETHUSD'; // Allowed: 'ETHUSD', 'BTCUSD' (please, specify in .env file).
 const precision = 'P0'; // Allowed: P0', 'P1', 'P2', 'P3', 'P4', 'R0'.
 const len = 25; // Allowed size: '1', '25', '100'
-const url = `/tips/${pair}?precision=${precision}&len=${len}`;
+const url = `https://localhost:8080/tips/${pair}?precision=${precision}&len=${len}`;
 ```
 
 Run example:
@@ -110,13 +110,13 @@ curl http://localhost:8080/tips/ETHUSD?precision=P0&len=100
 
 #### /depth
 
-The endpoint call definition is:
+Endpoint definition example (js):
 
 ```javascript
 const pair = 'ETHUSD'; // Allowed: 'ETHUSD', 'BTCUSD' (please, specify in .env file).
 const type = 'bid'; // Allowed: 'bid', 'ask'
 const type = 2; // Size
-const url = `/depth/${pair}?type=${type}&size=${size}`;
+const url = `https://localhost:8080/depth/${pair}?type=${type}&size=${size}`;
 ```
 
 Run example:
