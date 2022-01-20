@@ -115,7 +115,7 @@ Endpoint definition example (js):
 ```javascript
 const pair = 'ETHUSD'; // Allowed: 'ETHUSD', 'BTCUSD' (please, specify in .env file).
 const type = 'bid'; // Allowed: 'bid', 'ask'
-const type = 2; // Size
+const size = 2; // Size
 const url = `https://localhost:8080/depth/${pair}?type=${type}&size=${size}`;
 ```
 
